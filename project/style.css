@@ -1,7 +1,7 @@
 body{
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+
 }
 header{
   position: relative;
@@ -15,7 +15,7 @@ header video{
  position: absolute;
  top: 0;
  left: 0;
- z-index: -1;
+ z-index: -2;
  width: 100%;
  height: 100%;
  object-fit: cover;
@@ -36,13 +36,13 @@ header video{
   flex-wrap:  wrap;
   width:100%;
   height: 80%;
-  z-index: 2;
+  z-index: 0;
 }
 .navigations{
   min-height: 20%;
   display: flex;
   flex-direction: row;
-  z-index: 2;
+  z-index: 1;
   max-height: 20%;
   align-items: center;
   justify-content: center;
@@ -98,9 +98,7 @@ header video{
 .head_icons{
   border: 1px solid yellow;
   margin: 100px 0 20px 0;
-  width: 50vw;
-  height: 50vh;
-  padding: 2% 5%;
+  padding-left: 5%;
 }
 .service{
   border: 1px solid yellow;
@@ -119,4 +117,107 @@ header video{
   width: 40%;
   height: 100%;
   border: 1px solid yellow;
+}
+/* --- SUPPORT | ПОДДЕРЖКА ОТ DRUPAL --- */
+
+.support {
+    margin-top: 160px;
+    color: #050C33;
+    border: 1px solid yellow;
+}
+
+/* Общая информация */
+
+.support__title {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 51px;
+    width: 30%;
+    margin: 0px auto 0px auto;
+    border: 1px solid yellow;
+
+}
+
+/* Карточки услуг */
+
+.support__list {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:  wrap;
+    border: 1px solid yellow;
+    padding: 0 150px 0 150px;
+}
+
+.support__item {
+    z-index: 2;
+    flex: 20%;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border: 1px solid yellow;
+}
+@media screen and (max-width: 1080px) {
+   .support__item {
+     flex:100%;
+   }
+   .support__list{
+     padding: 0;
+   }
+   .support__title {
+       text-align: center;
+       font-size: 22px;
+       font-weight: 700;
+       line-height: 31px;
+       width: 50%;
+       margin: 0px auto 0px auto;
+       border: 1px solid yellow;
+   }
+ }
+/* Информация с карточек услуг */
+
+.support__item .support__item-number {
+    font-size: 12px;
+    opacity: 0.5;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.support__item .support__item-title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 12px;
+}
+
+.support__item .support__item-desc {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    opacity: 0.7;
+}
+
+/* фон с druplicon */
+
+.support__druplicon {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1060px;
+    height: 839px;
+}
+
+/* фон с laptop */
+
+.support__laptop {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 760px;
+    height: 562px;
+    z-index: 4;
 }
